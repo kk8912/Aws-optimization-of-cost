@@ -1,7 +1,6 @@
 import boto3
 def lambda_handler(event, context):
     ec2 = boto3.client('ec2')
-
     # Get all EBS snapshots
     response = ec2.describe_snapshots(OwnerIds=['self'])
 
